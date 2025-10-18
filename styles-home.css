@@ -1,0 +1,480 @@
+/* GladGrade Home Page Specific Styles (index.html) */
+
+/* ==================== HOME INITIAL CAROUSEL (HIC) ==================== */
+.home-initial-carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 70px;
+    background: #000;
+}
+
+.hic-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hic-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.hic-slide.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hic-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hic-background video,
+.hic-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hic-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.6) 100%);
+    z-index: 1;
+}
+
+.hic-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 3rem;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.hic-text {
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hic-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--gold-primary);
+    color: #000;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.hic-text h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -2px;
+    color: #fff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.hic-text p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hic-btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--gold-primary);
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.hic-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+/* HIC Navigation */
+.hic-nav {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    z-index: 10;
+    display: flex;
+    gap: 1rem;
+}
+
+.hic-dot {
+    width: 60px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 2px;
+}
+
+.hic-dot.active {
+    background: var(--gold-primary);
+    width: 80px;
+}
+
+.hic-dot:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* HIC Arrows */
+.hic-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.hic-arrow:hover {
+    background: var(--gold-primary);
+    border-color: var(--gold-primary);
+    color: #000;
+}
+
+.hic-arrow.prev {
+    left: 2rem;
+}
+
+.hic-arrow.next {
+    right: 2rem;
+}
+
+/* ==================== GRADIENT TRANSITION ==================== */
+.gradient-transition {
+    height: 5px;
+    background: linear-gradient(180deg, #000 0%, #ffffff 100%);
+}
+
+/* ==================== FEATURES SECTION ==================== */
+.features-section {
+    padding: 120px 3rem;
+    background: #ffffff;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    color: var(--text-dark);
+}
+
+.section-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.features-grid {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: #fafafa;
+    padding: 3rem;
+    border-radius: 8px;
+    transition: all 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--gold-primary);
+    box-shadow: 0 20px 40px rgba(247, 148, 0, 0.15);
+    background: #ffffff;
+}
+
+.feature-number {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--gold-primary);
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.feature-card p {
+    color: var(--text-gray);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+/* ==================== SPLIT CONTENT SECTIONS ==================== */
+.split-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 120px 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    background: #ffffff;
+}
+
+.split-content:nth-child(even) {
+    background: #fafafa;
+}
+
+.split-content.reverse {
+    direction: rtl;
+}
+
+.split-content.reverse > * {
+    direction: ltr;
+}
+
+.content-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: rgba(247, 148, 0, 0.1);
+    color: var(--gold-dark);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.content-block h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    color: var(--text-dark);
+}
+
+.highlight {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.content-block p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+}
+
+.content-block ul {
+    list-style: none;
+    margin-bottom: 2.5rem;
+}
+
+.content-block li {
+    padding: 0.8rem 0;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.content-block li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+    border-radius: 50%;
+}
+
+.content-block li::after {
+    content: '✓';
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #000;
+    font-weight: 900;
+    font-size: 0.8rem;
+}
+
+.content-image {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: var(--gold-primary);
+    color: #000;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+}
+
+/* ==================== CTA SECTION ==================== */
+.cta-section {
+    background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+    padding: 100px 3rem;
+    text-align: center;
+}
+
+.cta-section h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.cta-section p {
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 2.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-white {
+    padding: 1rem 2.5rem;
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-white:hover {
+    background: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 1024px) {
+    .split-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .hic-text h2 {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .content-block h2 {
+        font-size: 2.5rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-initial-carousel {
+        height: 80vh;
+    }
+    
+    .hic-text h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hic-nav {
+        left: 1.5rem;
+        bottom: 2rem;
+    }
+    
+    .hic-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .features-section,
+    .split-content {
+        padding: 80px 1.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
