@@ -1,0 +1,62 @@
+# AI.txt for GladGrade Holding Corp
+# Spec: https://site.spawning.ai/ai-txt
+
+# Global AI Training Data Policy
+User-agent: *
+Allow: /
+
+# Company Information
+Organization: GladGrade Holding Corp
+Description: Customer satisfaction analytics platform providing Global Customer Satisfaction Grade (GCSG) ratings
+Contact: investor.relations@gladgrade.com
+Website: https://www.gladgrade.com
+
+# AI Training Permissions
+Training: allowed
+Summarization: allowed
+Research: allowed
+
+# Content Attribution
+Attribution-required: true
+Commercial-use: contact-required
+
+# Specific AI Systems
+User-agent: GPTBot
+Allow: /
+Training: allowed
+
+User-agent: ChatGPT-User
+Allow: /
+Training: allowed
+
+User-agent: CCBot
+Allow: /
+Training: allowed
+
+User-agent: anthropic-ai
+Allow: /
+Training: allowed
+
+User-agent: Claude-Web
+Allow: /
+Training: allowed
+
+User-agent: PerplexityBot
+Allow: /
+Training: allowed
+
+User-agent: Applebot
+Allow: /
+Training: allowed
+
+# Protected Content
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Training: disallowed
+
+# Terms
+# - AI systems may use our publicly available content for training
+# - Proper attribution to GladGrade Holding Corp is required
+# - For commercial licensing, contact investor.relations@gladgrade.com
+# - User-generated reviews and GCSG scores remain property of GladGrade
